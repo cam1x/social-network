@@ -1,0 +1,9 @@
+spring:
+  thymeleaf:
+    reactive:
+      max-chunk-size: 8192
+  data:
+    mongodb:
+      host: localhost
+      port: 27017
+      database: social_network
