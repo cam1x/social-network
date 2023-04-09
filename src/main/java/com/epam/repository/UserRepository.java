@@ -32,7 +32,9 @@ public class UserRepository {
 
     @PostConstruct
     public void createCollection() {
-        mongoOperations.createCollection(Message.class, CollectionOptions.empty().size(1000).capped());
+        if (!mongoOperations.collectionExists(Message.class)) {
+            mongoOperations.createCollection(Message.class, CollectionOptions.empty().size(1000).capped());
+        }
     }
 
 

@@ -78,7 +78,7 @@ public class UserController {
         return userRepository.getMaxNewFriendshipByMonth();
     }
 
-    @GetMapping("/minMovie")
+    @GetMapping("/minMovies")
     public @ResponseBody int getMinMovie() {
         return userRepository.getMinWatchedMovieByUsersWithFriends();
     }
